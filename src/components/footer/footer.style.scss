@@ -1,0 +1,51 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.footer{
+    padding: 8rem 20rem;
+    background-color: $color-secondary;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__left-container{
+        &--logo-container{
+            height: 9rem;
+            margin-bottom: 2rem;
+            img{
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &--text-container{
+            width: 48rem;
+
+            p{
+                font-size: 1.8rem !important;
+                color: $color-white;
+            }
+        }
+    }
+    &__right-container{
+        align-self: flex-end;
+        &--media-container{
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+
+            .link{
+                color: $color-white;
+            }
+        }
+        .copyright{
+            color: $color-primary;
+            font-size: 2rem;
+            text-align: end;
+
+        }
+    }
+}

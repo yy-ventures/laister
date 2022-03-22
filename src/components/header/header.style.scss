@@ -1,0 +1,40 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.header{
+    padding: 5rem 12rem;
+    background-color: $color-secondary;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__logo-container{
+        height: 9.9rem;
+
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        &--item{
+            list-style: none;
+        }
+        &--link{
+            text-decoration: none;
+            font-size: 2.4rem;
+            color: $color-white;
+
+            transition: all .3s;
+
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+}
