@@ -1,0 +1,46 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.home{
+    &__hero{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: [full-col-start sm-col-start] 40% [sm-col-end lg-col-start] 70% [lg-col-end full-col-end];
+        &--content-container{
+            position: relative;
+            background-color:#FFC000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .layout-1{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            .box{
+                width: max-content;
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4rem;
+
+                h1{
+                    font-weight: 400 !important;
+                }
+            }
+            span{
+                display: block;
+            }
+        }
+        &--slider-container{
+            background-color:aquamarine;
+            
+        }
+    }
+
+}

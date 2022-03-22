@@ -1,0 +1,23 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.btn{
+    padding: 2rem 4rem;
+    font-size: 2.3rem;
+    font-weight: 700;
+    border-radius: 5rem;
+    border: 2px solid $color-secondary;
+    color: $color-secondary;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &:hover{
+        background-color: $color-primary;
+    }
+}
