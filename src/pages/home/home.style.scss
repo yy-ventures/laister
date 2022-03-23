@@ -6,8 +6,10 @@
     &__hero{
         height: 100vh;
         display: grid;
-        grid-template-columns: [full-col-start sm-col-start] 40% [sm-col-end lg-col-start] 70% [lg-col-end full-col-end];
+        grid-template-columns: [full-col-start sm-col-start] 40% [sm-col-end lg-col-start] 60% [lg-col-end full-col-end];
         &--content-container{
+            grid-column: sm-col-start / sm-col-end;
+
             position: relative;
             background-color:#FFC000;
             display: flex;
@@ -38,8 +40,114 @@
             }
         }
         &--slider-container{
+            grid-column: lg-col-start / lg-col-end;
             background-color:aquamarine;
+
+            position: relative;
+
+            .yellow-line{
+                height: 2.3rem;
+                width: 35.1rem;
+                background-color: $color-primary;
+
+                position: absolute;
+                right: 0;
+                top: -1.15rem;
+            }
             
+        }
+    }
+    &__mission{
+        position: relative;
+        padding: 13rem 15rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        &--content{
+            width: 65rem;
+            background-color: aquamarine;
+
+            h2{
+                font-weight: 400 !important;
+            }
+            .yellow-line-sm{
+                height: 1.7rem;
+                width: 20rem;
+                background-color: $color-primary;
+                margin-top: 3rem;
+            }
+        }
+        &--image{
+            
+            .img-container{
+                height: 80rem;
+                width: 60rem;
+                position: relative;
+                
+                img{
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .box-layout{
+            height: 55rem;
+            width: 55rem;
+            background-color: $color-secondary;
+
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    &__about{
+        display: grid;
+        grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+        grid-template-rows: repeat(2, [row-start] min-content [row-end]);
+
+        &--image{
+            background-color: bisque;
+            grid-column: col-start 1 / col-end 1;
+            grid-row: row-start 1 / row-end 1;
+
+            .img-container{
+                height: 76rem;
+                width: 76rem;
+
+                img{
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .yellow-layout-lg{
+                height: 6.8rem;
+                width: 48rem;
+                background-color: $color-primary;
+            }
+        }
+        &--content{
+            background-color: aqua;
+            grid-column: col-start 2 / col-end 2;
+            grid-row: row-start 1 / row-end 1;
+
+            .sdg-list{
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                .sdg-img{
+                    height: 19rem;
+                    width: 19rem;
+                }
+            }
+
+        }
+        &--gallery{
+            background-color: aquamarine;
+            grid-column: col-start 1 / col-end 2;
+            grid-row: row-start 2 / row-end 2;
+
         }
     }
 
