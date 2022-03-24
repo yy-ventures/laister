@@ -59,14 +59,13 @@
     }
     &__mission{
         position: relative;
-        padding: 13rem 15rem;
+        padding: 13rem 15rem 25rem 15rem;
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
         &--content{
             width: 65rem;
-            background-color: aquamarine;
 
             h2{
                 font-weight: 400 !important;
@@ -81,12 +80,15 @@
         &--image{
             
             .img-container{
-                height: 80rem;
-                width: 60rem;
+                height: 70rem;
+                width: 50rem;
                 position: relative;
+                margin: 0 auto;
+
                 
                 img{
                     height: 100%;
+                    width: 100%;
                     object-fit: contain;
                 }
             }
@@ -107,10 +109,13 @@
         grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
         grid-template-rows: repeat(2, [row-start] min-content [row-end]);
 
+        background-color: $color-secondary;
+
         &--image{
-            background-color: bisque;
             grid-column: col-start 1 / col-end 1;
             grid-row: row-start 1 / row-end 1;
+
+            margin-top: -50rem;
 
             .img-container{
                 height: 76rem;
@@ -128,26 +133,132 @@
             }
         }
         &--content{
-            background-color: aqua;
             grid-column: col-start 2 / col-end 2;
             grid-row: row-start 1 / row-end 1;
 
+            padding-right: 15rem;
+
+            .box{
+                width: 70rem;
+            }
+
             .sdg-list{
+                margin-top: -10rem;
+                margin-bottom: 5rem;
+
                 display: flex;
                 justify-content: space-between;
                 gap: 2rem;
+
                 .sdg-img{
                     height: 19rem;
                     width: 19rem;
                 }
             }
+            .text{
+                font-size: 2.2rem;
+                color: $color-white;
+
+                p:not(:last-child){
+                        margin-bottom: 3rem;
+                    }
+            }
 
         }
         &--gallery{
-            background-color: aquamarine;
             grid-column: col-start 1 / col-end 2;
             grid-row: row-start 2 / row-end 2;
 
+            .heading-container{
+                padding-left: 15rem;
+                .heading{
+                    color: $color-primary;
+                    font-size: 9.4rem;
+                }
+                .white-line{
+                    width: 12.5rem;
+                    height: 1.1rem;
+                    background-color: $color-white;
+                }
+            }
+            .gallery-slider{
+                background-color: saddlebrown;
+                padding: 0 10rem;
+                height: 50rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &__contact{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        &--image-container{
+            .img-container{
+                height: 90rem;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &--form-container{
+            padding: 20rem 15rem;
+            background-color: $color-primary;
+
+            position: relative;
+
+            .layout-2{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            .form-heading{
+                margin-bottom: 5rem;
+            }
+            .form{
+                width: 35rem;
+
+                position: relative;
+                z-index: 111;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+
+                .input, .textarea{
+                    width: 100%;
+                    padding: 1rem 2rem;
+                    font-size: 2.4rem;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $color-secondary;
+                    color: $color-secondary;
+
+                    &:not(:last-child){
+                        margin-bottom: 4rem;
+                    }
+
+                    &::placeholder{
+                        color: $color-secondary;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .input{
+
+                }
+                .textarea{
+
+                }
+            }
         }
     }
 

@@ -15,6 +15,7 @@ import sdg11 from '../../assets/images/sdg-11.png';
 
 // LAYOUT
 import lgFire from '../../assets/layout/fire-lg.png';
+import smFire from '../../assets/layout/fire-sm.png';
 
 import './home.style.scss'
 
@@ -61,14 +62,16 @@ export default function Home() {
             <div className="yellow-layout-lg"></div>
           </div>
           <div className="home__about--content">
-            <div className="sdg-list">
-              <img className='sdg-img' src={sdg7} alt="sdg 7" />
-              <img className='sdg-img' src={sdg8} alt="sdg 8" />
-              <img className='sdg-img' src={sdg11} alt="sdg 11" />
-            </div>
-            <div className="text">
-              <p>Laister is a small-scale portable digester that converts organic waste to fuel and fertilizer by utilizing household wastes. Laister targets the renewable energy sector with our services and focuses on SDG 4, 7, and 11</p>
-              <p>The digester, unlike existing biogas plants, is not fixed and is suitable for use in an urban area where there is space constraint. The design and size of the digester is innovative which allows the user to install it within their household or they can share a larger unit from a rooftop or garage. It eliminates all wastes produced within a community which prevents pollution and indirectly teaches users about waste management as the segregation is done by them.</p>
+            <div className="box">
+              <div className="sdg-list">
+                <img className='sdg-img' src={sdg7} alt="sdg 7" />
+                <img className='sdg-img' src={sdg8} alt="sdg 8" />
+                <img className='sdg-img' src={sdg11} alt="sdg 11" />
+              </div>
+              <div className="text">
+                <p>Laister is a small-scale portable digester that converts organic waste to fuel and fertilizer by utilizing household wastes. Laister targets the renewable energy sector with our services and focuses on SDG 4, 7, and 11</p>
+                <p>The digester, unlike existing biogas plants, is not fixed and is suitable for use in an urban area where there is space constraint. The design and size of the digester is innovative which allows the user to install it within their household or they can share a larger unit from a rooftop or garage. It eliminates all wastes produced within a community which prevents pollution and indirectly teaches users about waste management as the segregation is done by them.</p>
+              </div>
             </div>
           </div>
           <div className="home__about--gallery">
@@ -77,7 +80,26 @@ export default function Home() {
               <div className="white-line"></div>
             </div>
             <div className="gallery-slider">
-              slider component will be here
+              <h3>slider component will be here</h3>
+            </div>
+          </div>
+        </div>
+        <div className="home__contact">
+          <div className="home__contact--image-container">
+            <div className="img-container">
+              <img src={contactImg} alt="image" />
+            </div>
+          </div>
+          <div className="home__contact--form-container">
+            <img className='layout-2' src={smFire} alt="fire layout" />
+            <div className="box">
+              <h2 className='form-heading'>Contact us</h2>
+              <form className='form'>
+                <input className='input' type="text" placeholder='Name'/>
+                <input className='input' type="email" placeholder='E-mail'/>
+                <textarea className='textarea' type="text" placeholder='Your message'/>
+                <Button text='Send Message'/>
+              </form>
             </div>
           </div>
         </div>
