@@ -4,7 +4,6 @@
 
 .home{
     &__hero{
-        height: 100vh;
         display: grid;
         grid-template-columns: [full-col-start sm-col-start] 40% [sm-col-end lg-col-start] 60% [lg-col-end full-col-end];
         &--content-container{
@@ -41,7 +40,7 @@
         }
         &--slider-container{
             grid-column: lg-col-start / lg-col-end;
-            background-color:aquamarine;
+            height: 100%;
 
             position: relative;
 
@@ -53,6 +52,7 @@
                 position: absolute;
                 right: 0;
                 top: -1.15rem;
+                z-index: 111;
             }
             
         }
@@ -181,14 +181,10 @@
                     background-color: $color-white;
                 }
             }
-            .gallery-slider{
+            .gallery-slider-container{
                 background-color: saddlebrown;
                 padding: 0 10rem;
                 height: 50rem;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }
         }
     }
@@ -251,12 +247,6 @@
                     &:focus{
                         outline: none;
                     }
-                }
-                .input{
-
-                }
-                .textarea{
-
                 }
             }
         }

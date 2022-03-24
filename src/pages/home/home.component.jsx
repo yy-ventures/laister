@@ -3,6 +3,7 @@ import React from 'react'
 // COMPONENT
 import Button from '../../components/button/button.component'
 import HeroSlider from '../../components/hero-slider/hero-slider.component';
+import GallerySlider from '../../components/gallery-slider/gallery-slider.component';
 
 // IMAGE
 import sliderImg from '../../assets/images/slider-img.png';
@@ -35,7 +36,7 @@ export default function Home() {
           </div>
           <div className="home__hero--slider-container">
             <div className="yellow-line"></div>
-            {/* <HeroSlider/> */}
+            <HeroSlider/>
           </div>
         </div>
         <div className="home__mission">
@@ -75,12 +76,12 @@ export default function Home() {
             </div>
           </div>
           <div className="home__about--gallery">
-            <div className="heading-container">
+            <div className="heading-container mb-5">
               <h1 className="heading">Gallery</h1>
               <div className="white-line"></div>
             </div>
-            <div className="gallery-slider">
-              <h3>slider component will be here</h3>
+            <div className="gallery-slider-container mb-5">
+              <GallerySlider/>
             </div>
           </div>
         </div>

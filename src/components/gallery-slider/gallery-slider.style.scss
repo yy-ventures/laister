@@ -1,0 +1,22 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.gallery-slider{
+    background-color: aquamarine;
+    height: 100%;
+
+    .card{
+        background-color: palevioletred;
+        height: 100%;
+    }
+
+    .slick-slider{
+        background-color: green;
+        padding: 10rem;
+        height: 100%;
+    }
+    .slick-track{
+        height: 100%;
+    }
+}
