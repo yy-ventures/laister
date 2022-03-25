@@ -9,6 +9,12 @@
         &--content-container{
             grid-column: sm-col-start / sm-col-end;
 
+            @include response (phone){
+                grid-column: full-col-start / full-col-end;
+
+                padding: 20rem 0;
+            }
+
             position: relative;
             background-color:#FFC000;
             display: flex;
@@ -19,6 +25,10 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
+
+                @include response(phone){
+                    height: 70rem;
+                }
             }
 
             .box{
@@ -44,6 +54,10 @@
 
             position: relative;
 
+            @include response (phone){
+                grid-column: full-col-start / full-col-end;
+            }
+
             .yellow-line{
                 height: 2.3rem;
                 width: 35.1rem;
@@ -53,6 +67,10 @@
                 right: 0;
                 top: -1.15rem;
                 z-index: 111;
+
+                @include response(phone){
+                    display: none;
+                }
             }
             
         }
@@ -64,8 +82,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
+
+        @include response(phone){
+            padding: 5rem;
+        }
+
+        @include response(phone){
+            grid-template-columns: 1fr;
+        }
         &--content{
             width: 65rem;
+
+            @include response(phone){
+                width: 100%;
+            }
 
             h2{
                 font-weight: 400 !important;
@@ -102,28 +132,52 @@
             position: absolute;
             right: 0;
             top: 0;
+
+            @include response(phone){
+                display: none;
+            }
         }
     }
     &__about{
+        background-color: $color-secondary;
+
         display: grid;
         grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
         grid-template-rows: repeat(2, [row-start] min-content [row-end]);
-
-        background-color: $color-secondary;
+        
+        @include response(phone){
+            grid-template-columns:[col-start] 1fr [col-end];
+            grid-template-rows: repeat(3, [row-start] min-content [row-end]);            
+        }
 
         &--image{
             grid-column: col-start 1 / col-end 1;
             grid-row: row-start 1 / row-end 1;
-
+            
             margin-top: -50rem;
+            
+            @include response(phone){
+                grid-column: col-start / col-end;
+                grid-row: row-start 1 / row-end 1;
+
+                margin-top: 0;
+
+                margin-bottom: 10rem;
+            }
 
             .img-container{
                 height: 76rem;
                 width: 76rem;
 
+                @include response(phone){
+                    height: 60rem;
+                    width: 100%;
+                }
+                
                 img{
                     height: 100%;
-                    object-fit: contain;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
             .yellow-layout-lg{
@@ -135,11 +189,23 @@
         &--content{
             grid-column: col-start 2 / col-end 2;
             grid-row: row-start 1 / row-end 1;
-
+            
             padding-right: 15rem;
+            
+            @include response(phone){
+                grid-column: col-start / col-end;
+                grid-row: row-start 2 / row-end 2;
+
+                padding: 0 3rem;
+                margin-bottom: 10rem;
+            }
 
             .box{
                 width: 70rem;
+
+                @include response(phone){
+                    width: 100%;
+                }
             }
 
             .sdg-list{
@@ -149,6 +215,10 @@
                 display: flex;
                 justify-content: space-between;
                 gap: 2rem;
+
+                @include response(phone){
+                    margin-top: 0;
+                }
 
                 .sdg-img{
                     height: 19rem;
@@ -169,8 +239,16 @@
             grid-column: col-start 1 / col-end 2;
             grid-row: row-start 2 / row-end 2;
 
+            @include response(phone){
+                grid-row: row-start 3 / row-end 3;
+            }
+
             .heading-container{
                 padding-left: 15rem;
+
+                @include response(phone){
+                    padding-left: 3rem;
+                }
                 .heading{
                     color: $color-primary;
                     font-size: 9.4rem;
@@ -182,15 +260,22 @@
                 }
             }
             .gallery-slider-container{
-                background-color: saddlebrown;
                 padding: 0 10rem;
-                height: 50rem;
+
+                @include response(phone){
+                    padding: 0 6rem;
+                }
             }
         }
     }
     &__contact{
         display: grid;
         grid-template-columns: repeat(2, 50%);
+
+        @include response(phone){
+            grid-template-columns: 1fr;
+        }
+
         &--image-container{
             .img-container{
                 height: 90rem;
@@ -208,10 +293,18 @@
 
             position: relative;
 
+            @include response(phone){
+                padding: 10rem 5rem;
+            }
+
             .layout-2{
                 position: absolute;
                 right: 0;
                 bottom: 0;
+
+                @include response(phone){
+                    height: 50rem;
+                }
             }
             .form-heading{
                 margin-bottom: 5rem;
@@ -226,6 +319,10 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
+
+                @include response(phone){
+                    width: 100%;
+                }
 
 
                 .input, .textarea{

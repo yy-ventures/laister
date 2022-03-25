@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include response(phone){
+        padding: 2rem;
+    }
+
     &__logo-container{
         height: 9.9rem;
 
@@ -21,6 +25,10 @@
         display: flex;
         align-items: center;
         gap: 5rem;
+
+        @include response(phone){
+            display: none;
+        }
 
         &--item{
             list-style: none;

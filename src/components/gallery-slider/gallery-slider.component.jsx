@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
+// IMAGE
+import img1 from '../../assets/images/gallery-img.png'
+import img2 from '../../assets/images/contact-img.png'
+import img3 from '../../assets/images/product-img.png'
+import img4 from '../../assets/images/slider-img.png'
+import img5 from '../../assets/images/gallery-img.png'
+import img6 from '../../assets/images/gallery-img.png'
+
 // slick css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,31 +46,49 @@ export default class GallerySlider extends Component {
       <div className="gallery-slider">
         <Slider {...settings}>
           <div className="card">
-            <h3>1</h3>
+            <div className="card__img-container">
+              <img src={img1} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>2</h3>
+            <div className="card__img-container">
+              <img src={img2} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>3</h3>
+            <div className="card__img-container">
+              <img src={img3} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>4</h3>
+            <div className="card__img-container">
+              <img src={img4} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>5</h3>
+            <div className="card__img-container">
+              <img src={img5} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>6</h3>
+            <div className="card__img-container">
+              <img src={img6} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>7</h3>
+            <div className="card__img-container">
+              <img src={img1} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>8</h3>
+            <div className="card__img-container">
+              <img src={img2} alt="card image" />
+            </div>
           </div>
           <div className="card">
-            <h3>9</h3>
+            <div className="card__img-container">
+              <img src={img3} alt="card image" />
+            </div>
           </div>
         </Slider>
       </div>

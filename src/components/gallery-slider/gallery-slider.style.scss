@@ -3,18 +3,29 @@
 @import '../../sass/variables.scss';
 
 .gallery-slider{
-    background-color: aquamarine;
     height: 100%;
 
     .card{
-        background-color: palevioletred;
-        height: 100%;
+        padding-inline: 1rem;
+
+        &__img-container{
+            height: 40rem;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     .slick-slider{
-        background-color: green;
-        padding: 10rem;
+        padding: 5rem;
         height: 100%;
+
+        @include response(phone){
+            padding: 2rem;
+        }
     }
     .slick-track{
         height: 100%;

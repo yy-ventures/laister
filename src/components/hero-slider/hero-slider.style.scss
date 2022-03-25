@@ -3,15 +3,21 @@
 @import '../../sass/variables.scss';
 
 .hero-slider{
-    height: 100%;
+    height: min-content;
 
-    .img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-    .slide{
-        height: 100%;
+    .slide{        
+        &__img-container{
+            height: 100vh;
+
+            @include response(phone){
+                height: 60rem;
+            }
+            .img{
+                width: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
     .slick-dots{
         bottom: 3rem;

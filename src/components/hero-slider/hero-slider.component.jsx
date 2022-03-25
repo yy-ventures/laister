@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-// import { baseUrl } from "./config";
 
 // IMAGE
 import image1 from '../../assets/images/slider-img.png'
@@ -29,16 +28,24 @@ export default class HeroSlider extends Component {
       <div className="hero-slider">
         <Slider {...settings}>
           <div className="slide">
-            <img className="img" src={image1} />
+            <div className="slide__img-container">
+              <img className="img" src={image1} />
+            </div>
           </div>
           <div className="slide">
-            <img className="img" src={image2} />
+            <div className="slide__img-container">
+              <img className="img" src={image2} />
+            </div>
           </div>
           <div className="slide">
-            <img className="img" src={image1} />
+            <div className="slide__img-container">
+              <img className="img" src={image1} />
+            </div>
           </div>
           <div className="slide">
-            <img className="img" src={image1} />
+            <div className="slide__img-container">
+              <img className="img" src={image1} />
+            </div>
           </div>
         </Slider>
       </div>

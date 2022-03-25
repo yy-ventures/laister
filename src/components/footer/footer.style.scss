@@ -9,7 +9,16 @@
     display: flex;
     justify-content: space-between;
 
+    @include response (phone){
+        flex-direction: column;
+
+        padding: 4rem 10rem;
+    }
+
     &__left-container{
+        @include response(phone){
+            margin-bottom: 5rem;
+        }
         &--logo-container{
             height: 9rem;
             margin-bottom: 2rem;
@@ -21,6 +30,10 @@
         &--text-container{
             width: 48rem;
 
+            @include response(phone){
+                width: 100%;
+            }
+
             p{
                 font-size: 1.8rem !important;
                 color: $color-white;
@@ -29,6 +42,11 @@
     }
     &__right-container{
         align-self: flex-end;
+
+        @include response(phone){
+            margin-inline: auto;
+        }
+
         &--media-container{
             font-size: 3.5rem;
             margin-bottom: 2rem;
@@ -45,6 +63,10 @@
             color: $color-primary;
             font-size: 2rem;
             text-align: end;
+
+            @include response(phone){
+                text-align: center;
+            }
 
         }
     }
