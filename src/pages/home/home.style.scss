@@ -29,6 +29,9 @@
                 @include response(phone){
                     height: 70rem;
                 }
+                @include response(desktop){
+                    height: 50rem;
+                }
             }
 
             .box{
@@ -115,6 +118,11 @@
                 position: relative;
                 margin: 0 auto;
 
+                @include response(phone){
+                    height: 60rem;
+                    width: 40rem;
+                }
+
                 
                 img{
                     height: 100%;
@@ -164,11 +172,15 @@
 
                 margin-bottom: 10rem;
             }
-
+            
             .img-container{
                 height: 76rem;
                 width: 76rem;
-
+                
+                @include response(tab-port){
+                    height: 60rem;
+                    width: 60rem;
+                }
                 @include response(phone){
                     height: 60rem;
                     width: 100%;
@@ -192,6 +204,9 @@
             
             padding-right: 15rem;
             
+            @include response(tab-port){
+                padding-right: 10rem;
+            }
             @include response(phone){
                 grid-column: col-start / col-end;
                 grid-row: row-start 2 / row-end 2;
@@ -219,10 +234,15 @@
                 @include response(phone){
                     margin-top: 0;
                 }
-
+                
                 .sdg-img{
                     height: 19rem;
                     width: 19rem;
+
+                    @include response(tab-port){
+                        height: 17rem;
+                        width: 17rem;
+                    }
                 }
             }
             .text{
@@ -246,6 +266,9 @@
             .heading-container{
                 padding-left: 15rem;
 
+                @include response(tab-port){
+                    padding-left: 10rem;
+                }
                 @include response(phone){
                     padding-left: 3rem;
                 }

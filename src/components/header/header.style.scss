@@ -11,6 +11,24 @@
 
     @include response(phone){
         padding: 2rem;
+        justify-content: flex-end;
+    }
+
+    .menu-btn{
+        height: min-content;
+        align-self: center;
+        margin-right: auto;
+        font-size: 4rem;
+        color: $color-white;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+
+        display: none;
+
+        @include response(phone){
+            display: inline;
+        }
     }
 
     &__logo-container{
@@ -27,7 +45,17 @@
         gap: 5rem;
 
         @include response(phone){
-            display: none;
+            background-color: $color-secondary;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 7rem 14rem;
+            width: 100%;
+            transition: all .3s ease-in;
+
+            position: absolute;
+            left: -120rem;
+            top: 13rem;
+            z-index: 111;
         }
 
         &--item{
@@ -44,5 +72,8 @@
                 color: $color-primary;
             }
         }
+    }
+    .active{
+        left: 0;
     }
 }

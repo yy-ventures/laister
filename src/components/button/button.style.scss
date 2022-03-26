@@ -17,6 +17,16 @@
     align-items: center;
     gap: 2rem;
 
+    @include response(tab-port){
+        padding: 1rem 2rem;
+    }
+
+    img{
+        @include response(tab-port){
+            width: 4rem;
+        }
+    }
+
     &:hover{
         background-color: $color-primary;
     }

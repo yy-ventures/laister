@@ -26,6 +26,9 @@
         @include response(phone){
             padding: 2rem;
         }
+        @include response(tab-port){
+            padding: 0;
+        }
     }
     .slick-track{
         height: 100%;
