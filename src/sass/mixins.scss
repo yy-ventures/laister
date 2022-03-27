@@ -28,8 +28,8 @@ $breakpoint arguments choice:
     @if $breakpoint == phone { // media size 640px //checked
         @media (max-width: 40em) {@content};
     }
-    @if $breakpoint == vp-800 { // media size 800px //checked
-        @media (max-width: 50em) {@content};
+    @if $breakpoint == vp-800 { // media size 820px //checked
+        @media (max-width: 51.25em) {@content};
     }
     @if $breakpoint == tab-port { // media size 960px //checked
         @media (max-width: 60em) {@content};

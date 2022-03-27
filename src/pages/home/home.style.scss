@@ -6,11 +6,12 @@
     &__hero{
         display: grid;
         grid-template-columns: [full-col-start sm-col-start] 40% [sm-col-end lg-col-start] 60% [lg-col-end full-col-end];
+
         &--content-container{
             grid-column: sm-col-start / sm-col-end;
 
             @include response (phone){
-                grid-column: full-col-start / full-col-end;
+                grid-column: full-col-start / full-col-end; 
 
                 padding: 20rem 0;
             }

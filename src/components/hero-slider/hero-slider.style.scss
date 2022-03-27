@@ -9,6 +9,10 @@
         &__img-container{
             height: 100vh;
 
+            @include response(vp-800){
+                height: 70rem;
+            }
+
             @include response(phone){
                 height: 60rem;
             }

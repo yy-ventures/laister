@@ -98,7 +98,7 @@ export default function Home() {
               <form className='form'>
                 <input className='input' type="text" placeholder='Name'/>
                 <input className='input' type="email" placeholder='E-mail'/>
-                <textarea className='textarea' type="text" placeholder='Your message'/>
+                <textarea className='textarea' maxLength='300' type="text" placeholder='Your message'/>
                 <Button text='Send Message'/>
               </form>
             </div>

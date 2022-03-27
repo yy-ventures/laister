@@ -44,7 +44,7 @@ export default class HeroSlider extends Component {
           </div>
           <div className="slide">
             <div className="slide__img-container">
-              <img className="img" src={image1} />
+              <img className="img" src={image2} />
             </div>
           </div>
         </Slider>
