@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
+import { useAlert } from 'react-alert'
+import emailjs from '@emailjs/browser';
 
 // COMPONENT
 import Button from '../../components/button/button.component'
@@ -13,6 +15,7 @@ import contactImg from '../../assets/images/contact-img.png';
 import sdg7 from '../../assets/images/sdg-7.png';
 import sdg8 from '../../assets/images/sdg-8.png';
 import sdg11 from '../../assets/images/sdg-11.png';
+import rightArrow from '../../assets/icons/long-right-arrow.png'
 
 // LAYOUT
 import lgFire from '../../assets/layout/fire-lg.png';
@@ -21,6 +24,20 @@ import smFire from '../../assets/layout/fire-sm.png';
 import './home.style.scss'
 
 export default function Home() {
+  const form = useRef();
+  const alert = useAlert()
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_reo4yle', 'template_2tcp08m', form.current, 'user_o5Q1fksLSPlNeoTHcjWJA')
+    .then((result) => {
+      alert.show("Thank you! we have received your query!")
+      form.current.reset()
+    }, (error) => {
+        console.log(error.text);
+    });
+  };
+
   return (
     <div className='home'>
         <div className="home__hero">
@@ -95,11 +112,12 @@ export default function Home() {
             <img className='layout-2' src={smFire} alt="fire layout" />
             <div className="box">
               <h2 className='form-heading'>Contact us</h2>
-              <form className='form'>
-                <input className='input' type="text" placeholder='Name'/>
-                <input className='input' type="email" placeholder='E-mail'/>
-                <textarea className='textarea' maxLength='300' type="text" placeholder='Your message'/>
-                <Button text='Send Message'/>
+              <form ref={form} onSubmit={sendEmail} className='form'>
+                <input type="text" name="user_name" placeholder="Full Name" className='input' required />
+                <input type="email" name="user_email" placeholder="E-mail Address" className='input' required />
+                <textarea name="message" placeholder='Your Message' className='input' rows='4' required />
+                {/* <input type="submit" value="Send" className='btn' /> */}
+                <button className='btn'>Send <img src={rightArrow} alt="right arrow" /> </button>
               </form>
             </div>
           </div>
