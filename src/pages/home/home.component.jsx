@@ -115,7 +115,7 @@ export default function Home() {
               <form ref={form} onSubmit={sendEmail} className='form'>
                 <input type="text" name="user_name" placeholder="Full Name" className='input' required />
                 <input type="email" name="user_email" placeholder="E-mail Address" className='input' required />
-                <textarea name="message" placeholder='Your Message' className='input' rows='4' required />
+                <textarea name="message" placeholder='Your Message' maxLength='300' className='input' rows='4' required />
                 {/* <input type="submit" value="Send" className='btn' /> */}
                 <button className='btn'>Send <img src={rightArrow} alt="right arrow" /> </button>
               </form>

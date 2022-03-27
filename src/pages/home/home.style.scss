@@ -316,7 +316,9 @@
             background-color: $color-primary;
 
             position: relative;
-
+            @include response(vp-800){
+                padding: 10rem 10rem;
+            }
             @include response(phone){
                 padding: 10rem 5rem;
             }
@@ -325,8 +327,7 @@
                 position: absolute;
                 right: 0;
                 bottom: 0;
-
-                @include response(phone){
+                @include response(vp-800){
                     height: 50rem;
                 }
             }
