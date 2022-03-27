@@ -10,7 +10,7 @@ import './header.style.scss'
 
 export default function Header() {
 
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
 
   const handleSidebar = () => {
     setActive(!active);
