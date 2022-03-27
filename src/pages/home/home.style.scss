@@ -316,6 +316,9 @@
             background-color: $color-primary;
 
             position: relative;
+            @include response(desktop){
+                padding: 15rem 10rem;
+            }
             @include response(vp-800){
                 padding: 10rem 10rem;
             }

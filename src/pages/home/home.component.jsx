@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className='home'>
-        <div className="home__hero">
+        <div className="home__hero" id='home'>
           <div className="home__hero--content-container">
             <img className='layout-1' src={lgFire} alt="fire layout" />
             <div className="box">
@@ -56,7 +56,7 @@ export default function Home() {
             <HeroSlider/>
           </div>
         </div>
-        <div className="home__mission">
+        <div className="home__mission" id='about'>
           <div className="box-layout"></div>
           <div className="home__mission--content">
             <h2>Our mission is to provide
@@ -92,7 +92,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="home__about--gallery">
+          <div className="home__about--gallery" id='gallery'>
             <div className="heading-container mb-5">
               <h1 className="heading">Gallery</h1>
               <div className="white-line"></div>
@@ -102,7 +102,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="home__contact">
+        <div className="home__contact" id='contact'>
           <div className="home__contact--image-container">
             <div className="img-container">
               <img src={contactImg} alt="image" />
@@ -117,7 +117,7 @@ export default function Home() {
                 <input type="email" name="user_email" placeholder="E-mail Address" className='input' required />
                 <textarea name="message" placeholder='Your Message' maxLength='300' className='input' rows='4' required />
                 {/* <input type="submit" value="Send" className='btn' /> */}
-                <button className='btn'>Send <img src={rightArrow} alt="right arrow" /> </button>
+                <button className='btn'>Send Message<img src={rightArrow} alt="right arrow" /> </button>
               </form>
             </div>
           </div>
