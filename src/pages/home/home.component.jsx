@@ -1,6 +1,7 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import { useAlert } from 'react-alert'
 import emailjs from '@emailjs/browser';
+import AOS from 'aos';
 
 // COMPONENT
 import Button from '../../components/button/button.component'
@@ -22,6 +23,7 @@ import lgFire from '../../assets/layout/fire-lg.png';
 import smFire from '../../assets/layout/fire-sm.png';
 
 import './home.style.scss'
+import "aos/dist/aos.css";
 
 export default function Home() {
   const form = useRef();
@@ -38,12 +40,18 @@ export default function Home() {
     });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration : 1500
+    });
+  }, []);
+
   return (
     <div className='home'>
         <div className="home__hero" id='home'>
           <div className="home__hero--content-container">
-            <img className='layout-1' src={lgFire} alt="fire layout" />
-            <div className="box">
+            <img className='layout-1' src={lgFire} alt="fire layout" data-aos="zoom-in-right" />
+            <div className="box" data-aos="fade-right">
               <h1>Making an
                   <span className='bold'> energy-efficient, </span>
                   clean city.
@@ -51,14 +59,14 @@ export default function Home() {
               <Button text='Get in Touch'/>
             </div>
           </div>
-          <div className="home__hero--slider-container">
+          <div className="home__hero--slider-container" data-aos="fade-left">
             <div className="yellow-line"></div>
             <HeroSlider/>
           </div>
         </div>
         <div className="home__mission" id='about'>
           <div className="box-layout"></div>
-          <div className="home__mission--content">
+          <div className="home__mission--content" data-aos="fade-right">
             <h2>Our mission is to provide
                 affordable, clean energy
                 access to <span className='bold'>1 million people </span>
@@ -67,7 +75,7 @@ export default function Home() {
             <div className="yellow-line-sm"></div>
           </div>
           <div className="home__mission--image">
-            <div className="img-container">
+            <div className="img-container" data-aos="fade-left">
               <img src={productImg} alt="product image" />
             </div>
           </div>
@@ -80,7 +88,7 @@ export default function Home() {
             <div className="yellow-layout-lg"></div>
           </div>
           <div className="home__about--content">
-            <div className="box">
+            <div className="box" data-aos="fade-up">
               <div className="sdg-list">
                 <img className='sdg-img' src={sdg7} alt="sdg 7" />
                 <img className='sdg-img' src={sdg8} alt="sdg 8" />
@@ -98,7 +106,9 @@ export default function Home() {
               <div className="white-line"></div>
             </div>
             <div className="gallery-slider-container mb-5">
-              <GallerySlider/>
+              <div data-aos="fade-up">
+                <GallerySlider/>
+              </div>
             </div>
           </div>
         </div>
