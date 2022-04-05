@@ -2,19 +2,19 @@
 @import '../../sass/typography.scss';
 @import '../../sass/variables.scss';
 
-.achievement-slider{
+.featured-slider{
     height: 100%;
 
     .card{
         padding-inline: 1rem;
 
         &__img-container{
-            height: 40rem;
+            height: 10rem;
 
             img{
                 height: 100%;
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
@@ -32,7 +32,7 @@
     }
     .slick-prev:before,
     .slick-next:before {
-        color: $color-secondary;
+        color: $color-primary;
     }
     .slick-track{
         height: 100%;

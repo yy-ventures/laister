@@ -8,6 +8,7 @@ import Button from '../../components/button/button.component'
 import HeroSlider from '../../components/hero-slider/hero-slider.component';
 import GallerySlider from '../../components/gallery-slider/gallery-slider.component';
 import AchievementSlider from '../../components/achievement-slider/achievement-slider.component';
+import FeaturedSlider from '../../components/featured-slider/featured-slider.component';
 
 // IMAGE
 // import sliderImg from '../../assets/images/slider-img.jpg';
@@ -120,6 +121,17 @@ export default function Home() {
             <div className="slider-container mb-5">
               <div data-aos="fade-up">
                 <AchievementSlider/>
+              </div>
+            </div>
+          </div>
+          <div className="home__about--featured" id='gallery'>
+            <div className="heading-container mb-5">
+              <h1 className="heading">Featured In</h1>
+              <div className="white-line"></div>
+            </div>
+            <div className="slider-container mb-5">
+              <div data-aos="fade-up">
+                <FeaturedSlider/>
               </div>
             </div>
           </div>
