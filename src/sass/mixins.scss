@@ -34,8 +34,8 @@ $breakpoint arguments choice:
     @if $breakpoint == tab-port { // media size 960px //checked
         @media (max-width: 60em) {@content};
     }
-    @if $breakpoint == desktop { // media size 1366px //checked
-        @media (max-width: 85.375em) {@content};
+    @if $breakpoint == desktop { // media size 1440px //checked
+        @media (max-width: 90em) {@content};
     }
     @if $breakpoint == big-desktop { // media size 1800px
         @media (min-width: 112.5em) {@content};

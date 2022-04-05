@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 
 // IMAGE
-import image1 from '../../assets/images/slider-img.png'
-import image2 from '../../assets/images/contact-img.png'
+import image1 from '../../assets/images/hero-slider-img/slider-img-1.jpg'
+import image2 from '../../assets/images/hero-slider-img/slider-img-2.png'
+import image3 from '../../assets/images/hero-slider-img/slider-img-3.jpg'
+import image4 from '../../assets/images/hero-slider-img/slider-img.jpg'
 
 // slick css
 import "slick-carousel/slick/slick.css";
@@ -39,12 +41,12 @@ export default class HeroSlider extends Component {
           </div>
           <div className="slide">
             <div className="slide__img-container">
-              <img className="img" src={image1} />
+              <img className="img" src={image3} />
             </div>
           </div>
           <div className="slide">
             <div className="slide__img-container">
-              <img className="img" src={image2} />
+              <img className="img" src={image4} />
             </div>
           </div>
         </Slider>

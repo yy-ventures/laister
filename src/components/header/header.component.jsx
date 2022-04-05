@@ -25,10 +25,10 @@ export default function Header() {
         <img src={logo} alt="laister logo"/>
       </div>
       <ul className={active ? 'header__nav active' : 'header__nav'}>
-        <li className='header__nav--item'><a href="/#home" className='header__nav--link'>Home</a></li>
-        <li className='header__nav--item'><a href="/#about" className='header__nav--link'>About</a></li>
-        <li className='header__nav--item'><a href="/#gallery" className='header__nav--link'>Gallery</a></li>
-        <li className='header__nav--item'><a href="/#contact" className='header__nav--link'>Contact</a></li>
+        <li className='header__nav--item'><a onClick={handleSidebar} href="/#home" className='header__nav--link'>Home</a></li>
+        <li className='header__nav--item'><a onClick={handleSidebar} href="/#about" className='header__nav--link'>About</a></li>
+        <li className='header__nav--item'><a onClick={handleSidebar} href="/#gallery" className='header__nav--link'>Gallery</a></li>
+        <li className='header__nav--item'><a onClick={handleSidebar} href="/#contact" className='header__nav--link'>Contact</a></li>
       </ul>
     </div>
   )

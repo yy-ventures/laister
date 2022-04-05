@@ -7,11 +7,12 @@ import AOS from 'aos';
 import Button from '../../components/button/button.component'
 import HeroSlider from '../../components/hero-slider/hero-slider.component';
 import GallerySlider from '../../components/gallery-slider/gallery-slider.component';
+import AchievementSlider from '../../components/achievement-slider/achievement-slider.component';
 
 // IMAGE
-import sliderImg from '../../assets/images/slider-img.png';
+// import sliderImg from '../../assets/images/slider-img.jpg';
 import productImg from '../../assets/images/product-img.png';
-import galleryImg from '../../assets/images/gallery-img.png';
+import galleryImg from '../../assets/images/gallery-img.jpg';
 import contactImg from '../../assets/images/contact-img.png';
 import sdg7 from '../../assets/images/sdg-7.png';
 import sdg8 from '../../assets/images/sdg-8.png';
@@ -111,6 +112,17 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="home__about--achievements" id='gallery'>
+            <div className="heading-container mb-5">
+              <h1 className="heading">Achievements</h1>
+              <div className="white-line"></div>
+            </div>
+            <div className="slider-container mb-5">
+              <div data-aos="fade-up">
+                <AchievementSlider/>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="home__contact" id='contact'>
           <div className="home__contact--image-container">
@@ -127,7 +139,7 @@ export default function Home() {
                 <input type="email" name="user_email" placeholder="E-mail Address" className='input' required />
                 <textarea name="message" placeholder='Your Message' maxLength='300' className='input' rows='4' required />
                 {/* <input type="submit" value="Send" className='btn' /> */}
-                <button className='btn'>Send Message<img src={rightArrow} alt="right arrow" /> </button>
+                <button type='submit' value="Send" className='btn'>Send Message<img src={rightArrow} alt="right arrow" /> </button>
               </form>
             </div>
           </div>
